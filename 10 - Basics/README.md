@@ -1,0 +1,72 @@
+# Basics
+[Basic Data Types in Python][]
+
+## Basic data types
+### Integers
+```python
+print(12345)
+print(2 ** 100)
+# casting
+string_val = '12'
+integer_val = int(string_val)
+```
+Integers have unlimited range. [Python Max Int][]
+
+#### Base systems
+```python
+val_8 = 0o10
+val_16 = 0x10
+val_2 = 0b10
+```
+
+### Floats
+```python
+print(12345.)
+print(2. ** 100)
+# casting
+string_val = '.5'
+integer_val = float(string_val)
+```
+
+### Boolean Type
+```python
+assert bool(42) is True
+assert bool(0) is False
+assert bool('text') is True
+assert bool('') is False
+assert bool([1, 2, 3]) is True
+assert bool([]) is False
+```
+
+> Almost all platforms represent Python float values as 64-bit “double-precision” values, according to the IEEE 754
+> standard. In that case, the maximum value a floating-point number can have is approximately 1.8e10+308.
+> Python will indicate a number greater than that by the string inf:
+> 
+> The closest a nonzero number can be to zero is approximately 5.0e10-324.
+> Anything closer to zero than that is effectively zero.
+
+### Strings
+```python
+print('This string contains a single quote (\') character.')
+print("This string contains a double quote (\") character.")
+print('''This string has
+a single (')
+and a double (") quote.''')
+```
+
+## Formatting output
+[Using % and .format() for great good!][] - "old" and "new" way of formatting strings.
+
+But there's the newest: [Python 3's f-Strings][]
+```python
+name = 'Mark'
+age = 41
+print(f"He's {name}, next year he'll be {age + 1}")
+```
+
+
+[Basic Data Types in Python]: https://realpython.com/python-data-types/
+[Python Max Int]: https://www.pythonpool.com/python-max-int/
+[Float type and its methods]: https://www.geeksforgeeks.org/python-float-type-and-its-methods/
+[Using % and .format() for great good!]: https://pyformat.info/
+[Python 3's f-Strings]: https://realpython.com/python-f-strings/
