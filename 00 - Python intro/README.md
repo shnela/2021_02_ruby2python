@@ -77,15 +77,15 @@ Run interpreter in terminal by typing `python3`
 1. Print `x` `y` times in a loop.
 
 ### File
-Open file [`0_base.py`](./0_base.py)
+Open file [`base.py`](base.py)
 1. Reproduce all steps from previous assignment
 
 #### Run in terminal
 Run in terminal:
 ```shell
-python3 ./0_base.py
+python3 ./base.py
 ```
-Now do the same with `1_datetime.py` and `2_faker.py`.
+Now do the same with `datetime.py` and `faker.py`.
 
 ### External dependencies
 ```shell
@@ -101,7 +101,7 @@ pip install faker
 # check what's installed
 pip freeze
 # And run code containing 3rd party libraries
-python ./2_faker.py
+python ./faker.py
 ```
 
 But, what's [PIP][]?
