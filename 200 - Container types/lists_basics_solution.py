@@ -30,9 +30,12 @@ if __name__ == '__main__':
 
     sum_val = sum_elements(numbers)
     print(f'SUM: {sum_val}')
+    print(f'SUM: {sum(numbers)}')  # that's Python way
 
     min_val = min_element(numbers)
     print(f'MIN: {min_val}')
+    print(f'MIN: {min(numbers)}')  # that's Python way
 
     avg_val = avg_of_elements(numbers)
     print(f'AVG: {avg_val}')
+    print(f'AVG: {sum(numbers) / len(numbers)}')  # that's Python way

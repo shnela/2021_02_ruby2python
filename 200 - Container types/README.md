@@ -2,15 +2,15 @@
 
 ## List
 ```python
-# list of having only integers
+# list of only integers
 a = [1, 2, 3, 4, 5, 6]
 print(a)
 
-# list of having only strings
+# list of only strings
 b = ['hello', 'john', 'reese']
 print(b)
 
-# list of having both integers and strings
+# list of both integers and strings
 c = ['hey', 'you', 1, 2, 3, 'go']
 print(c)
 
@@ -24,6 +24,8 @@ print(letters)
 letters[0] = 's replacement'
 print(letters)
 ```
+
+Let's do [lists_basics.py](./lists_basics.py)
 
 ### List [Slicing][]
 ```python
@@ -44,12 +46,11 @@ Exercise: [slicing.py](./slicing.py)
 a = (1, 2, 3, 4)
 print(a)  # prints the whole tuple
 
-# tuple having multiple type of data.
+# tuple having multiple types of data.
 b = ('hello', 1, 2, 3, 'go')
 print(b)  # prints the whole tuple
 
 # index of tuples are also 0 based.
-
 print(b[4])  # this prints a single element in a tuple, in this case 'go'
 
 # constructing tuple
@@ -58,6 +59,7 @@ print(letters)
 # list is mutable
 letters[0] = 's replacement'  # Will throw TypeError
 ```
+[muteble_element_in_immutable_tuple.py](muteble_element_in_immutable_tuple.py)
 
 ## Dict
 ```python
