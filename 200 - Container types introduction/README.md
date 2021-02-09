@@ -75,6 +75,10 @@ print(a[2])
 print(a['age'])
 ```
 
+Exercises:
+* [measure_words_length.py](measure_words_length.py)
+* [count_words.py](count_words.py)
+
 ### [dictionaries ordered in Python 3.6+][]
 > They are insertion ordered. As of Python 3.6, for the CPython implementation of Python,
 > dictionaries remember the order of items inserted.
@@ -84,6 +88,12 @@ print(a['age'])
 > As of Python 3.7, this is no longer an implementation detail and instead becomes a language feature.
 
 Look at [dict_order.py](./dict_order.py).
+
+
+## Set
+```python
+
+```
 
 [dictionaries ordered in Python 3.6+]: https://stackoverflow.com/a/39980744/1565454
 [Slicing]: https://stackoverflow.com/a/509295/1565454
