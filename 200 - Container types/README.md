@@ -25,6 +25,19 @@ letters[0] = 's replacement'
 print(letters)
 ```
 
+### List [Slicing][]
+```python
+a[-1]    # last item in the array
+a[-2:]   # last two items in the array
+a[:-2]   # everything except the last two items
+
+a[::-1]    # all items in the array, reversed
+a[1::-1]   # the first two items, reversed
+a[:-3:-1]  # the last two items, reversed
+a[-3::-1]  # everything except the last two items, reversed
+```
+Exercise: [slicing.py](./slicing.py)
+
 ## Tuple
 ```python
 # tuple having only integer type of data.
@@ -59,3 +72,16 @@ print(a[2])
 # print value having key='age'
 print(a['age'])
 ```
+
+### [dictionaries ordered in Python 3.6+][]
+> They are insertion ordered. As of Python 3.6, for the CPython implementation of Python,
+> dictionaries remember the order of items inserted.
+> This is considered an implementation detail in Python 3.6; you need to use OrderedDict if you want insertion
+> ordering that's guaranteed across other implementations of Python (and other ordered behavior).
+>
+> As of Python 3.7, this is no longer an implementation detail and instead becomes a language feature.
+
+Look at [dict_order.py](./dict_order.py).
+
+[dictionaries ordered in Python 3.6+]: https://stackoverflow.com/a/39980744/1565454
+[Slicing]: https://stackoverflow.com/a/509295/1565454

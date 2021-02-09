@@ -64,9 +64,31 @@ age = 41
 print(f"He's {name}, next year he'll be {age + 1}")
 ```
 
+### f-string features
+#### [Formatted string literals]
+```python
+width = 10
+precision = 4
+value = decimal.Decimal("12.34567")
+print(f"result: {value:{width}.{precision}}")
+# output: "result:      12.35"
+```
+#### [f-strings support = for self-documenting expressions and debugging][]
+```python
+user = 'eric_idle'
+member_since = date(1975, 7, 31)
+print(f'{user=} {member_since=}')
+# output: "user='eric_idle' member_since=datetime.date(1975, 7, 31)"
+
+print(f'{theta=}  {cos(radians(theta))=:.3f}')
+# output: "theta=30  cos(radians(theta))=0.866"
+```
+_new in pytyhon3.8_
 
 [Basic Data Types in Python]: https://realpython.com/python-data-types/
 [Python Max Int]: https://www.pythonpool.com/python-max-int/
 [Float type and its methods]: https://www.geeksforgeeks.org/python-float-type-and-its-methods/
 [Using % and .format() for great good!]: https://pyformat.info/
 [Python 3's f-Strings]: https://realpython.com/python-f-strings/
+[Formatted string literals]: https://docs.python.org/3/reference/lexical_analysis.html#formatted-string-literals
+[f-strings support = for self-documenting expressions and debugging]: https://docs.python.org/3/whatsnew/3.8.html#f-strings-support-for-self-documenting-expressions-and-debugging
