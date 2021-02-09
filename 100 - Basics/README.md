@@ -1,7 +1,8 @@
 # Basics
-[Basic Data Types in Python][]
 
 ## Basic data types
+[Basic Data Types in Python][]
+
 ### Integers
 ```python
 print(12345)
@@ -84,6 +85,35 @@ print(f'{theta=}  {cos(radians(theta))=:.3f}')
 # output: "theta=30  cos(radians(theta))=0.866"
 ```
 _new in pytyhon3.8_
+
+## Unuseful or missing features
+### Switch statement
+Python doesn't have one.
+
+[python_switch.py](python_switch.py)
+
+### for else block
+```python
+for i in range(x):
+    print(i)
+    if i == 5:
+        break
+else:
+    print('else block')
+```
+[for_else.py](for_else.py)
+
+### while else block
+```python
+i = 0
+while i < x:
+    print(i)
+    if i == 5:
+        break
+else:
+    print('else block')
+```
+[while_else.py](while_else.py)
 
 [Basic Data Types in Python]: https://realpython.com/python-data-types/
 [Python Max Int]: https://www.pythonpool.com/python-max-int/
