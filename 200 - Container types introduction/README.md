@@ -70,7 +70,7 @@ letters[0] = 's replacement'  # Will throw TypeError
 ## Dict
 ```python
 # a sample dictionary variable
-a = {1:'first name', 2:'last name', 'age':33}
+a = {1: 'first name', 2: 'last name', 'age': 33}
 print(a)  # prints the whole dict
 
 # print value having key=1
@@ -85,6 +85,18 @@ Exercises:
 * [measure_words_length.py](measure_words_length.py)
 * [count_words.py](count_words.py)
 
+### Accessing dict elements
+```python
+d = {
+    'one': 1,
+}
+assert d['one'] == 1    
+# d['three']  # KeyError: 'three'
+assert d.get('one') == 1
+assert d.get('three') is None
+assert d.get('three', 'fallback val') == 'fallback val'
+```
+
 ### [dictionaries ordered in Python 3.6+][]
 > They are insertion ordered. As of Python 3.6, for the CPython implementation of Python,
 > dictionaries remember the order of items inserted.
@@ -96,10 +108,34 @@ Exercises:
 Look at [dict_order.py](./dict_order.py).
 
 
-## Set
+## [Set][]
 ```python
+one_set = set()
+one_set.add(1)
+one_set.add(1)
+print(one_set)
+# {1}
 
+initialized_set = {1, 2, 1}
+print(initialized_set)
+# {1, 2}
+
+assert one_set < initialized_set  # one_set is subset of initialized_set
+assert initialized_set - one_set == {2}
+assert initialized_set & one_set == {1}
+assert initialized_set | one_set == {1, 2}
 ```
+
+### But set isn't ordered
+[`set_order.py`](set_order.py)
+
+### Exercise
+[`set_example.py`](set_example.py)
+
+## Hashable / unhashable
+All set items and dictionary keys must be hashable.
+[`unhashable_elements.py`](unhashable_elements.py)
 
 [dictionaries ordered in Python 3.6+]: https://stackoverflow.com/a/39980744/1565454
 [Slicing]: https://stackoverflow.com/a/509295/1565454
+[Set]: https://docs.python.org/3.8/library/stdtypes.html#set-types-set-frozenset
