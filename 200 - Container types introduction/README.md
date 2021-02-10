@@ -29,6 +29,12 @@ Let's do [lists_basics.py](./lists_basics.py)
 
 ### List [Slicing][]
 ```python
+a[start:stop]  # items start through stop-1
+a[start:stop:step]  # items start through stop-1 with step
+a[start:]      # items start through the rest of the array
+a[:stop]       # items from the beginning through stop-1
+a[:]           # a copy of the whole array
+
 a[-1]    # last item in the array
 a[-2:]   # last two items in the array
 a[:-2]   # everything except the last two items
