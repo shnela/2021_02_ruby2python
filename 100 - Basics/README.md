@@ -29,6 +29,13 @@ string_val = '.5'
 integer_val = float(string_val)
 ```
 
+> Almost all platforms represent Python float values as 64-bit “double-precision” values, according to the IEEE 754
+> standard. In that case, the maximum value a floating-point number can have is approximately 1.8e10+308.
+> Python will indicate a number greater than that by the string inf:
+> 
+> The closest a nonzero number can be to zero is approximately 5.0e10-324.
+> Anything closer to zero than that is effectively zero.
+
 ### Boolean Type
 ```python
 assert bool(42) is True
@@ -38,13 +45,6 @@ assert bool('') is False
 assert bool([1, 2, 3]) is True
 assert bool([]) is False
 ```
-
-> Almost all platforms represent Python float values as 64-bit “double-precision” values, according to the IEEE 754
-> standard. In that case, the maximum value a floating-point number can have is approximately 1.8e10+308.
-> Python will indicate a number greater than that by the string inf:
-> 
-> The closest a nonzero number can be to zero is approximately 5.0e10-324.
-> Anything closer to zero than that is effectively zero.
 
 ### Strings
 ```python
