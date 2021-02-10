@@ -115,6 +115,9 @@ else:
 ```
 [while_else.py](while_else.py)
 
+## Exception handling 
+
+
 [Basic Data Types in Python]: https://realpython.com/python-data-types/
 [Python Max Int]: https://www.pythonpool.com/python-max-int/
 [Float type and its methods]: https://www.geeksforgeeks.org/python-float-type-and-its-methods/
