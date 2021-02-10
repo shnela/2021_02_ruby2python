@@ -34,3 +34,5 @@ def simple_print_args(arg1, arg2):
 Example: [decorator_example.py](decorator_example.py)
 
 Exercise: [decorator_exercise.py](decorator_exercise.py)
+
+Watch out for default mutable arguments: [default_mutable.py](default_mutable.py)
