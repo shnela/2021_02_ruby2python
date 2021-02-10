@@ -85,14 +85,14 @@ Run in terminal:
 ```shell
 python3 ./base.py
 ```
-Now do the same with `datetime.py` and `faker.py`.
+Now run files: [`import_datetime.py`](import_datetime.py) and [`import_faker.py`](import_faker.py).
 
 ### External dependencies
 ```shell
 # Create new python environment in '~/.envs/test'
-python3 -m venv ~/.envs/test
+python3 -m venv ~/.envs/training_env
 # Activate environment
-source ~/.envs/test/bin/activate
+source ~/.envs/training_env/bin/activate
 # Now we can use 'python' instead of 'python3'
 which python
 
@@ -101,7 +101,7 @@ pip install faker
 # check what's installed
 pip freeze
 # And run code containing 3rd party libraries
-python ./faker.py
+python ./import_faker.py
 ```
 
 But, what's [PIP][]?
