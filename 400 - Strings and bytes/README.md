@@ -15,6 +15,11 @@ print(bytes_sequence)
 # b'\xc5\x81ona - \xc4\x85\xc4\x99'
 assert len(bytes_sequence) == 12
 assert bytes_sequence[0] == 0xc5  # 197 (int)
+
+assert bytes_sequence.decode() == unicode_string
+print(bytes_sequence[::-1])
+# b'\x99\xc4\x85\xc4 - ano\x81\xc5'
+bytes_sequence[::-1].decode()  # UnicodeDecodeError: 'utf-8' ...
 ```
 
 ## Working with files   
@@ -28,5 +33,11 @@ f.close()
 with open('output2.txt', 'w') as f:
     f.write('Internal of file')
 ```
+
+Exercises:
+* [count_words.py](count_words.py)
+* [rewrite_order.py](rewrite_order.py)
+Bonus:
+* f
 
 [Python open file]: https://www.w3schools.com/python/python_file_handling.asp
