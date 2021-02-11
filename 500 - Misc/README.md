@@ -27,8 +27,7 @@ import this
 
 [The Zen of Python, Explained][]
 
-[The Zen of Python, Explained]: https://inventwithpython.com/blog/2018/08/17/the-zen-of-python-explained/
+Exercise: [enum_exercise.py](enum_exercise.py)
 
-## Examples and exercises:
-* [enum_exercise.py](enum_exercise.py)
-* [heavy_instances.py](heavy_instances.py)
+
+[The Zen of Python, Explained]: https://inventwithpython.com/blog/2018/08/17/the-zen-of-python-explained/
