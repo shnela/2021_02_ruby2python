@@ -18,4 +18,4 @@ if __name__ == '__main__':
     print(f'{hash(our_frozenset) = }')
 
     # ...but
-    our_frozenset.add('other val')  # AttributeError: 'frozenset' object has no attribute 'add'
+    # our_frozenset.add('other val')  # AttributeError: 'frozenset' object has no attribute 'add'
