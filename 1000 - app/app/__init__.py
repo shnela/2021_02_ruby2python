@@ -2,6 +2,7 @@ from database import Session, metadata
 from posts.models import Post
 from users.models import User
 
+
 if __name__ == '__main__':
     session = Session()
 
