@@ -28,6 +28,18 @@ class Strange:
             return val
         raise StopIteration()
 
+    # def __getattribute__(self, item):
+    #     pass
+
+    def __getattr__(self, item):
+        return f'Fake {item} attribute'
+
+    def __getitem__(self, item):
+        print(f'item {item} accessed by []')
+
+    def __sub__(self, other):
+        print('hehe')
+
 
 if __name__ == '__main__':
     strange = Strange(2, 'what now?')
@@ -42,4 +54,12 @@ if __name__ == '__main__':
     strange += 5
     print(strange)
     print(next(strange))
-    print(next(strange))
+    try:
+        print(next(strange))
+    except StopIteration:
+        print('Iterator exhausted')
+
+    print(strange.idx, strange.missing_attr)
+
+    print(strange[1])
+    print(strange[1:-1:3])
