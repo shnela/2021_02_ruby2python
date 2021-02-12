@@ -8,4 +8,4 @@ class User(Base):
     __tablename__ = 'users'
     id = Column(Integer, primary_key=True)
     username = Column(String(80), unique=True, nullable=False)
-    posts = relationship('Post', backref='user', lazy=True)
+    # posts = relationship('Post', backref='user', lazy=True)

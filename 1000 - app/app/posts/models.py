@@ -11,4 +11,4 @@ class Post(Base):
     content = Column(Text(), nullable=False)
     creation_date = Column(DateTime(timezone=True), nullable=False,
                            default=lambda: datetime.now(tz=timezone.utc))
-    user_id = Column(Integer, ForeignKey('users.id'), nullable=True)
+    # user_id = Column(Integer, ForeignKey('users.id'), nullable=True)
