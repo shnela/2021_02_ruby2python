@@ -2,7 +2,7 @@ from datetime import datetime, timezone
 
 from sqlalchemy import Column, Integer, Text, DateTime, ForeignKey
 
-from database import Base
+from app.database import Base
 
 
 class Post(Base):

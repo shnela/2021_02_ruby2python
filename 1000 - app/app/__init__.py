@@ -1,6 +1,6 @@
-from database import Session, metadata
-from posts.models import Post
-from users.models import User
+from app.database import Session, metadata
+from app.posts.models import Post
+from app.users.models import User
 
 
 if __name__ == '__main__':

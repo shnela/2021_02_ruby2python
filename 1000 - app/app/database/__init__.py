@@ -1,7 +1,8 @@
 from sqlalchemy import create_engine, MetaData
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import sessionmaker
-from config import Config
+
+from app.config import Config
 
 metadata = MetaData()
 engine = create_engine(Config.db_connection_string)
