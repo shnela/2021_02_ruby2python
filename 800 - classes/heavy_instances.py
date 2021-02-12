@@ -1,15 +1,17 @@
 """
 https://book.pythontips.com/en/latest/__slots__magic.html
-Result:
-    Class dict used 295.104512 MB.
-    Class EventSlots used 99.803136 MB.
-    Class EventTuple used 116.097024 MB.
-    Class Event used 213.635072 MB.
+Result (macOS, python3.9):
+    Class dict used 268.587008 MB.
+    Class EventSlots used 107.298816 MB.
+    Class EventTuple used 123.6992 MB.
+    Class Event used 218.939392 MB.
+    Class EventDataclass used 219.15648 MB.
 """
 import os
 import random
 from collections import namedtuple
 from multiprocessing import Pool
+from dataclasses import dataclass
 
 import psutil
 
@@ -22,7 +24,15 @@ class Event:
         self.value = value
 
 
+@dataclass
+class EventDataclass:
+    # https://docs.python.org/3/library/dataclasses.html
+    dna_base: str
+    value: int
+
+
 class EventSlots:
+    # https://docs.python.org/3/reference/datamodel.html?highlight=__slots__#object.__slots__
     __slots__ = ['dna_base', 'value']
 
     def __init__(self, dna_base, value):
@@ -30,6 +40,7 @@ class EventSlots:
         self.value = value
 
 
+# https://docs.python.org/3/library/dataclasses.html
 EventTuple = namedtuple('EventTuple', ['dna_base', 'value'])
 
 
@@ -45,4 +56,4 @@ def generate_events(event_cls: type, events_no: int = 10 ** 6):
 
 if __name__ == '__main__':
     with Pool(5) as p:
-        p.map(generate_events, [dict, Event, EventSlots, EventTuple])
+        p.map(generate_events, [dict, Event, EventSlots, EventTuple, EventDataclass])
