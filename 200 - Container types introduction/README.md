@@ -65,7 +65,7 @@ print(letters)
 # list is mutable
 letters[0] = 's replacement'  # Will throw TypeError
 ```
-[muteble_element_in_immutable_tuple.py](muteble_element_in_immutable_tuple.py)
+[mutable_element_in_immutable_tuple.py](mutable_element_in_immutable_tuple.py)
 
 ## Dict
 ```python
