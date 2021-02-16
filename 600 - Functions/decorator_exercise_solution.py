@@ -2,11 +2,22 @@ from functools import wraps
 
 
 def duplicate_result_deco(f):
-    pass
+    @wraps(f)
+    def inner_func(*args, **kwargs):
+        return f(*args, **kwargs) * 2
+
+    return inner_func
 
 
 def multiply_result_deco(n):
-    pass
+    def inner_deco(f):
+        @wraps(f)
+        def inner_func(*args, **kwargs):
+            return f(*args, **kwargs) * n
+
+        return inner_func
+
+    return inner_deco
 
 
 @duplicate_result_deco
@@ -32,6 +43,22 @@ def retry_n_times(n):
     """Decorator catches `CustomException` nad retries running function ntimes
     every time it displays `attempt=<attempt_no>.
     After n times it rerises exception."""
+    def inner_deco(f):
+        @wraps(f)
+        def inner_func(*args, **kwargs):
+            attempt = 1
+            while True:
+                try:
+                    print(f'{attempt=}')
+                    return f(*args, **kwargs)
+                except CustomException:
+                    if attempt >= n:
+                        raise
+                    attempt += 1
+
+        return inner_func
+
+    return inner_deco
 
 
 @retry_n_times(3)

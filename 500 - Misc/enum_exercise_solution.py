@@ -22,21 +22,30 @@ class Apple:
     def __str__(self):
         return f'Apple(color={self.color.value}, weight={self.weight})'
 
+    def __repr__(self):
+        return str(self)
+
     @staticmethod
     def generate_random_apple():
         return Apple(color=choice(list(Color)), weight=randint(50, 150))
 
     def get_weight_category(self) -> WeightCategory:
         """Return WeightCategory.light if weight is below 100"""
-        pass
+        return WeightCategory.light if self.weight < 100 else WeightCategory.heavy
 
 
 def group_apples_by_color(apples: List[Apple]) -> Dict[Color, List[Apple]]:
-    pass
+    apples_by_color = defaultdict(list)
+    for apple in apples:
+        apples_by_color[apple.color].append(apple)
+    return apples_by_color
 
 
 def group_apples_by_color_then_weight(apples: List[Apple]) -> Dict[Color, Dict[WeightCategory, List[Apple]]]:
-    pass
+    apples_by_color_and_weight = defaultdict(lambda: defaultdict(list))
+    for apple in apples:
+        apples_by_color_and_weight[apple.color][apple.get_weight_category()].append(apple)
+    return apples_by_color_and_weight
 
 
 if __name__ == '__main__':
@@ -47,7 +56,8 @@ if __name__ == '__main__':
     print(random_apple)
 
     # Exercise1: generate 100 random apples
-    apples = list()
+    apples = [Apple.generate_random_apple() for _ in range(100)]
+    print(apples)
 
     # Exercise2: group apples by color
     apples_by_color = group_apples_by_color(apples)
