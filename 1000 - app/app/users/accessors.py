@@ -1,9 +1,9 @@
-from app.users.models import User
-
 __all__ = (
     'get_user_by_id',
     'get_users_by_name',
 )
+
+from app.users.models import User
 
 
 def get_user_by_id(user_id, session):
