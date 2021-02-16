@@ -3,8 +3,13 @@
 ## Properties
 [Properties](https://www.programiz.com/python-programming/property)
 
-Example: [properties.py](./properties.py)
-Extension: [descriptors.py](./descriptors.py)
+### Examples:
+* [properties.py](./properties.py)
+* [descriptors.py](./descriptors.py)
 
 ## Problem with class size
 [heavy_instances.py](heavy_instances.py)
+
+## Overriding dunder methods
+* [dunders.py](dunders.py)
+* [dag.py](dag.py)
