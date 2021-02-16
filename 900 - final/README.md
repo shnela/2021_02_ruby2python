@@ -3,6 +3,7 @@
 ## Python
 * [Effective Python](https://effectivepython.com/) _(Maybe first edition was better)_
 * [Real Python](https://www.husseinnasser.com/p/software-engineering-videos.html)
+* [David Beazley](https://dabeaz.com/) - excellent talks, most of them is outdated, but still worth seeing...
 
 ## General backend
 * [What Every Programmer Should Know About Memory](https://www.asc.tuwien.ac.at/~schoeberl/wiki/lva/seminar11/cpumemory.pdf)
@@ -18,3 +19,7 @@
 
 ## Not really technical
 * [Computer Science: Just the Useful Bits](http://justtheusefulbits.com/)
+
+
+## Other tools
+* [Krisp (invitation link)](https://ref.krisp.ai/u/u6d3ecfb07) - Noise Cancellation Technology

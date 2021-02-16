@@ -37,7 +37,7 @@ next(gen)
 
 Exercise: [generators.py](generators.py)
 
-## Itertools
+## [Itertools](https://docs.python.org/3/library/itertools.html)
 ```python
 numbers = list(range(10))
 even_numbers = numbers[::2]
@@ -56,6 +56,19 @@ list(zip('abcd', range(1000)))
 from itertools import zip_longest
 list(zip_longest('abcd', range(1000), fillvalue='-'))
 ```
-[itertools docs](https://docs.python.org/3/library/itertools.html)
 
-[generate_alphabet.py](generate_alphabet.py)
+Exercise: [generate_alphabet.py](generate_alphabet.py)
+
+## Coroutines &rarr; AsyncIO
+Example: [two_way_generators.py](two_way_generators.py)
+
+Preparation to understand AsyncIO basics:
+* [YT: How Do Python Coroutines Work?]
+* [YT: Build Your Own Async]
+
+
+<!-- links -->
+[How to Use Generators and yield in Python]: https://realpython.com/introduction-to-python-generators/
+[YT: How Do Python Coroutines Work?]: https://www.youtube.com/watch?v=7sCu4gEjH5I
+[YT: Build Your Own Async]: https://www.youtube.com/watch?v=Y4Gt3Xjd7G8
+[Coroutines and Tasks]: https://docs.python.org/3/library/asyncio-task.html
