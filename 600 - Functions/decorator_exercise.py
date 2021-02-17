@@ -2,19 +2,11 @@ from functools import wraps
 
 
 def duplicate_result_deco(f):
-    @wraps(f)
-    def inner_func(*args, **kwargs):
-        return f(*args, **kwargs) * 2
-    return inner_func
+    pass
 
 
 def multiply_result_deco(n):
-    def inner_deco(f):
-        @wraps(f)
-        def inner_func(*args, **kwargs):
-            return f(*args, **kwargs) * n
-        return inner_func
-    return inner_deco
+    pass
 
 
 @duplicate_result_deco
@@ -32,6 +24,21 @@ def multiply3_square(x):
     return x ** 2
 
 
+class CustomException(Exception):
+    pass
+
+
+def retry_n_times(n):
+    """Decorator catches `CustomException` nad retries running function ntimes
+    every time it displays `attempt=<attempt_no>.
+    After n times it rerises exception."""
+
+
+@retry_n_times(3)
+def raise_custom_exc():
+    raise CustomException()
+
+
 if __name__ == '__main__':
     assert duplicated_square(3) == 18
     assert duplicated_square.__name__ == 'duplicated_square'
@@ -39,3 +46,5 @@ if __name__ == '__main__':
     assert multiply2_square.__name__ == 'multiply2_square'
     assert multiply3_square(3) == 27
     assert multiply3_square.__name__ == 'multiply3_square'
+
+    raise_custom_exc()

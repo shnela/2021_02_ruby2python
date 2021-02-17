@@ -23,7 +23,7 @@ class Apple:
         return f'Apple(color={self.color.value}, weight={self.weight})'
 
     @staticmethod
-    def getnerate_random_apple():
+    def generate_random_apple():
         return Apple(color=choice(list(Color)), weight=randint(50, 150))
 
     def get_weight_category(self) -> WeightCategory:
@@ -43,7 +43,7 @@ if __name__ == '__main__':
     light_apple = Apple(color=Color.red, weight=55)
     assert light_apple.get_weight_category() == WeightCategory.light
 
-    random_apple = Apple.getnerate_random_apple()
+    random_apple = Apple.generate_random_apple()
     print(random_apple)
 
     # Exercise1: generate 100 random apples

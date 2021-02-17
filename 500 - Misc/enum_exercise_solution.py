@@ -19,7 +19,7 @@ class Apple:
         self.color = color
         self.weight = weight
 
-    def __str__(self):
+    def __repr__(self):
         return f'Apple(color={self.color.value}, weight={self.weight})'
 
     @staticmethod
@@ -49,11 +49,12 @@ if __name__ == '__main__':
     light_apple = Apple(color=Color.red, weight=55)
     assert light_apple.get_weight_category() == WeightCategory.light
 
-    random_apple = Apple.getnerate_random_apple()
+    random_apple = Apple.generate_random_apple()
     print(random_apple)
 
     # Exercise1: generate 100 random apples
-    apples = [Apple.getnerate_random_apple() for _ in range(100)]
+    apples = [Apple.generate_random_apple() for _ in range(100)]
+    print(apples)
 
     # Exercise2: group apples by color
     apples_by_color = group_apples_by_color(apples)
