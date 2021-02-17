@@ -17,11 +17,13 @@ class Square(Rectangle):
 
 class Cube(Square):
     def surface_area(self):
-        face_area = super().area()
+        # face_area = super().area()
+        face_area = self.area()
         return face_area * 6
 
     def volume(self):
-        face_area = super().area()
+        # face_area = super().area()
+        face_area = self.area()
         return face_area * self.length
 
 
@@ -34,11 +36,11 @@ class Triangle:
         return 0.5 * self.base * self.height
 
 
-class RightPyramid(Triangle, Square):
+class RightPyramid(Square, Triangle):
     def __init__(self, base, slant_height):
         self.base = base
         self.slant_height = slant_height
-        # super().__init__(self.base)
+        super().__init__(self.base)
 
     def area(self):
         base_area = super().area()
