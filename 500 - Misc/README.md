@@ -54,12 +54,17 @@ import this
 
 Python Lint tools:
 * [flake8]
-* [pylint
-
-Exercises:
-* [enum_exercise.py](enum_exercise.py)
+* [pylint]
 
 ### [🎵 The PEP 8 Song 🎵]
+
+## [Pickle]
+### Examples
+* [json_example.py](json_example.py)
+* [pickle_example.py](pickle_example.py)
+
+## Exercises:
+* [enum_exercise.py](enum_exercise.py)
 
 [The Zen of Python, Explained]: https://inventwithpython.com/blog/2018/08/17/the-zen-of-python-explained/
 [PEP 8 - Style Guide for Python Code]: https://www.python.org/dev/peps/pep-0008/
@@ -69,3 +74,4 @@ Exercises:
 [flake8]:https://flake8.pycqa.org/en/latest/
 [pylint]: https://pylint.org/
 [🎵 The PEP 8 Song 🎵]: https://www.youtube.com/watch?v=hgI0p1zf31k
+[Pickle]: https://docs.python.org/3/library/pickle.html

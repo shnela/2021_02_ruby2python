@@ -72,3 +72,4 @@ Preparation to understand AsyncIO basics:
 [YT: How Do Python Coroutines Work?]: https://www.youtube.com/watch?v=7sCu4gEjH5I
 [YT: Build Your Own Async]: https://www.youtube.com/watch?v=Y4Gt3Xjd7G8
 [Coroutines and Tasks]: https://docs.python.org/3/library/asyncio-task.html
+[Async IO in Python: A Complete Walkthrough]: https://realpython.com/async-io-python/
